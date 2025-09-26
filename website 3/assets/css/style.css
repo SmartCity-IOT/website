@@ -1,0 +1,353 @@
+footer{
+  width:100%;
+  clear:both;          /* ignore any floats above */
+  display:block;       /* ensure block context */
+}
+:root {
+  --bg: #0b1220;
+  --bg-alt: #10172a;
+  --card: #131c31;
+  --text: #e5e7eb;
+  --muted: #94a3b8;
+  --accent: #60a5fa;
+  --accent-2: #34d399;
+  --border: #1f2a44;
+  --shadow: rgba(0,0,0,0.35);
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  line-height: 1.55;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(11, 18, 32, 0.8);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--border);
+}
+
+.navbar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.8rem 0;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+}
+
+.brand .logo {
+  width: 28px; height: 28px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  box-shadow: 0 6px 18px var(--shadow);
+}
+
+.nav-links {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.nav-links a {
+  color: var(--text);
+  text-decoration: none;
+  opacity: 0.9;
+  padding: 0.4rem 0.6rem;
+  border-radius: 8px;
+  border: 1px solid transparent;
+}
+
+.nav-links a:hover {
+  border-color: var(--border);
+  opacity: 1;
+}
+
+.hero {
+  padding: 4rem 0 2.5rem;
+  background:
+    radial-gradient(1200px 400px at 50% -100px, rgba(96,165,250,0.15), transparent 70%),
+    radial-gradient(1200px 400px at 50% 550px, rgba(52,211,153,0.12), transparent 70%);
+  border-bottom: 1px solid var(--border);
+}
+
+.hero h1 {
+  font-size: 2.2rem;
+  margin: 0 0 0.6rem;
+}
+
+.hero p {
+  color: var(--muted);
+  margin: 0.25rem 0 1.2rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.7rem 1rem;
+  border-radius: 12px;
+  text-decoration: none;
+  border: 1px solid var(--border);
+  background: linear-gradient(180deg, #0f172a, #0b1220);
+  color: var(--text);
+  box-shadow: 0 6px 16px var(--shadow);
+  transition: transform 0.06s ease;
+}
+.btn:hover { transform: translateY(-1px); }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1rem;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 1rem;
+  box-shadow: 0 8px 20px var(--shadow);
+}
+
+.section {
+  padding: 2.2rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.section h2 {
+  margin-top: 0;
+  font-size: 1.5rem;
+}
+
+.footer {
+  padding: 2rem 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.kbd {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  background: #0b1325;
+  color: #d1d5db;
+  padding: 0.2rem 0.4rem;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+}
+.table th, .table td {
+  text-align: left;
+  padding: 0.7rem 0.8rem;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.95rem;
+}
+.table th { background: #0f172a; }
+
+.badge {
+  display: inline-block;
+  padding: 0.2rem 0.5rem;
+  border-radius: 9999px;
+  border: 1px solid var(--border);
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+.section .grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.section .grid-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+@media (max-width: 900px) {
+  .section .grid-3 { grid-template-columns: 1fr; }
+  .section .grid-2 { grid-template-columns: 1fr; }
+  .nav-links { gap: 0.6rem; }
+}
+/* --- Team cards --- */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.2rem;
+}
+/* --- FIX TEAM PHOTOS: show full image, same height, no crop --- */
+.member-media {
+  height: 320px !important;        /* uniform box height */
+  aspect-ratio: auto !important;   /* stop ratio forcing */
+  overflow: hidden;
+  background: #0f172a;
+  border-bottom: 1px solid var(--border);
+}
+
+.member-media img {
+  display: block;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;  /* <— show entire photo */
+  object-position: center center !important;
+  background: #0f172a;             /* letterbox fill */
+}
+
+/* Optional fine-tuning per image (use on the <img> tag) */
+.member-media img.fit-cover  { object-fit: cover !important; }
+.member-media img.focus-top  { object-position: center top !important; }
+.member-media img.focus-face { object-position: 50% 35% !important; } /* nudges up a bit */
+
+
+.role-badge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  background: #e2e8f0;
+  color: #0f172a;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 9999px;
+  box-shadow: 0 6px 12px var(--shadow);
+  font-size: 0.9rem;
+}
+
+.member-media {
+  aspect-ratio: 3 / 4;
+}
+
+.member-media img {
+  object-fit: cover;
+  object-position: center top;
+}
+.id-row, .email-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0.2rem 0;
+}
+.id-pill {
+  background: #e2e8f0;
+  color: #0f172a;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 10px;
+  font-size: 0.85rem;
+}
+.member-desc {
+  margin: 0.6rem 0 0.8rem;
+  color: var(--muted);
+}
+
+.skills-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0.6rem 0 0.4rem;
+}
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.chip {
+  padding: 6px 10px;
+  border: 1px solid #cbd5e1;
+  color: #0f172a;
+  background: #e2e8f0;
+  border-radius: 9999px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+/* icons (inline svg containers) */
+.icon {
+  width: 16px; height: 16px; display: inline-block;
+  vertical-align: -2px;
+}
+
+/* responsive */
+@media (max-width: 1100px) {
+  .team-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 700px) {
+  .team-grid { grid-template-columns: 1fr; }
+}
+
+/* === TEAM (one style for ALL cards) === */
+.team-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+  gap:1.2rem;
+}
+
+/* use ONE card style everywhere */
+.member-card{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:18px;
+  overflow:hidden;                 /* keeps image + body aligned */
+  box-shadow:0 10px 24px var(--shadow);
+  display:flex; flex-direction:column;
+}
+
+/* TOP image area (same for all) */
+.member-media{
+  position:relative;
+  width:100%;
+  aspect-ratio: 16 / 9;            /* SAME height/ratio on every card */
+  background:#0f172a;
+  overflow:hidden;
+  border-bottom:1px solid var(--border);
+}
+.member-media img{
+  width:100%; height:100%;
+  object-fit:cover;                 /* change to 'contain' if you prefer full image */
+  object-position:center;
+  display:block;
+}
+
+/* Role pill – optional for all cards, same position */
+.role-badge{
+  position:absolute; top:12px; left:12px; z-index:2;
+  background:#e2e8f0; color:#0f172a;
+  font-weight:600; padding:6px 12px; border-radius:9999px;
+  box-shadow:0 6px 12px var(--shadow); font-size:0.9rem;
+}
+
+/* BODY */
+.member-body{ padding:1.1rem 1.2rem 1.25rem; }
+.member-name{ margin:0.2rem 0 0.45rem; font-size:1.35rem; font-weight:700; }
+
+.id-row,.email-row{ display:flex; align-items:center; gap:8px; margin:0.28rem 0; }
+.id-pill{ background:#e2e8f0; color:#0f172a; font-weight:600; padding:3px 8px; border-radius:10px; font-size:0.85rem; }
+
+.member-desc{ margin:0.6rem 0 0.8rem; color:var(--muted); }
+
+.chips{ display:flex; flex-wrap:wrap; gap:8px; }
+.chip{ padding:6px 10px; border:1px solid #cbd5e1; color:#0f172a; background:#e2e8f0; border-radius:9999px; font-size:0.9rem; font-weight:600; }
+
+/* Optional: same hover for all */
+.member-card:hover{ transform:translateY(-2px); transition:transform .15s ease; }

@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Our Team — IoT Security Lab</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{font-family:Inter,system-ui,sans-serif;color:#0f172a;background:#fff;line-height:1.6}
+
+    /* NAVBAR */
+    .nav-wrap{position:sticky;top:0;z-index:50;background:#fff;border-bottom:1px solid #e2e8f0}
+    .nav{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:72px;padding:0 20px}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:500;font-size:20px;color:#0f172a;text-decoration:none}
+    .brand img{height:42px;width:auto}
+    nav{display:flex;gap:24px;align-items:center}
+    .link{padding:8px 14px;border-radius:10px;color:#334155;font-weight:400;text-decoration:none;transition:.2s ease}
+    .link:hover{background:#f1f5f9;color:#1d4ed8}
+    .link.active,.link[aria-current="page"]{background:#e9f0ff;color:#1d4ed8;border:1px solid #bfdbfe}
+
+    /* HERO */
+    .hero{background:#f8fafc;width:100%;padding:80px 20px 60px;text-align:center}
+    .hero h1{font-size:48px;font-weight:800;margin-bottom:12px}
+    .hero p{max-width:760px;margin:0 auto;color:#475569;font-size:18px}
+
+    /* TEAM SECTION */
+    .team-section{padding:70px 20px;max-width:1200px;margin:0 auto}
+    .team-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:28px;margin-top:40px}
+    .team-card{background:#fff;border:1px solid #e2e8f0;border-radius:14px;box-shadow:0 4px 12px rgba(0,0,0,.05);transition:.2s}
+    .team-card:hover{transform:translateY(-4px)}
+    .team-card-header{display:flex;align-items:center;gap:14px;padding:20px 20px 0}
+    .avatar{width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:#eef2ff;color:#1d4ed8;font-weight:700;font-size:20px;border:1px solid #e2e8f0}
+    .team-card-body{padding:16px 20px 20px}
+    .team-card h3{font-size:20px;font-weight:700;margin:0}
+    .team-card .id{display:inline-block;background:#f1f5f9;color:#334155;font-size:13px;font-weight:600;padding:4px 8px;border-radius:6px;margin-top:6px}
+    .team-card p{font-size:15px;color:#475569;margin:12px 0 14px}
+    .skills{display:flex;flex-wrap:wrap;gap:8px}
+    .skill{background:#f1f5f9;font-size:13px;font-weight:500;padding:6px 10px;border-radius:20px;color:#334155}
+
+    /* Footer */
+    footer{background:#0f172a;color:#cbd5e1;padding:50px 20px 20px;margin-top:60px}
+    .footer-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px}
+    footer h4{color:#fff;margin-bottom:10px}
+    .small{font-size:14px;color:#94a3b8;margin-bottom:6px}
+    .legal{border-top:1px solid #1e293b;margin-top:30px;padding-top:16px;text-align:center;font-size:13px;color:#94a3b8}
+    @media(max-width:900px){.footer-grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <div class="nav-wrap">
+    <div class="nav">
+      <a class="brand" href="index.html">
+        <img src="assets/img/iot-security-lab-logo.png" alt="IoT Security Lab logo">
+        IoT Security Lab
+      </a>
+      <nav>
+        <a class="link" href="index.html">Home</a>
+        <a class="link active" aria-current="page" href="team.html">Team</a>
+        <a class="link" href="education-research.html">Education & Research</a>
+        <a class="link" href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <header class="hero">
+    <h1>Meet Our Team</h1>
+    <p>The IoT Security Lab team at Griffith University brings together expertise in networking, security testing, dataset generation, and system integration.</p>
+  </header>
+
+  <!-- TEAM SECTION -->
+  <section class="team-section">
+    <div class="team-grid">
+
+      <!-- Parnian -->
+      <div class="team-card">
+        <div class="team-card-header">
+          <div class="avatar">PA</div>
+          <div>
+            <h3>Parnian Alinejad</h3>
+            <div class="id">S5338163</div>
+          </div>
+        </div>
+        <div class="team-card-body">
+          <p>Project coordination, team management, and overall system integration.</p>
+          <div class="skills">
+            <span class="skill">Project Management</span>
+            <span class="skill">System Integration</span>
+            <span class="skill">Leadership</span>
+            <span class="skill">Technical Documentation</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Jagan -->
+      <div class="team-card">
+        <div class="team-card-header">
+          <div class="avatar">JD</div>
+          <div>
+            <h3>Jagan Daddala</h3>
+            <div class="id">S5385926</div>
+          </div>
+        </div>
+        <div class="team-card-body">
+          <p>Cybersecurity attack simulation, penetration testing, and vulnerability assessment.</p>
+          <div class="skills">
+            <span class="skill">Penetration Testing</span>
+            <span class="skill">Kali Linux</span>
+            <span class="skill">Wireshark</span>
+            <span class="skill">Network Security</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Abhaya -->
+      <div class="team-card">
+        <div class="team-card-header">
+          <div class="avatar">AV</div>
+          <div>
+            <h3>Abhaya Vengaldas</h3>
+            <div class="id">S5381218</div>
+          </div>
+        </div>
+        <div class="team-card-body">
+          <p>Technical writing, research documentation, and user guide development.</p>
+          <div class="skills">
+            <span class="skill">Technical Writing</span>
+            <span class="skill">Research Methods</span>
+            <span class="skill">Documentation</span>
+            <span class="skill">Content Design</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Jerish -->
+      <div class="team-card">
+        <div class="team-card-header">
+          <div class="avatar">JP</div>
+          <div>
+            <h3>Jerish John Puthusseryyppady</h3>
+            <div class="id">S5343048</div>
+          </div>
+        </div>
+        <div class="team-card-body">
+          <p>Network architecture design, protocol analysis, and traffic monitoring.</p>
+          <div class="skills">
+            <span class="skill">Network Analysis</span>
+            <span class="skill">ZigBee Protocol</span>
+            <span class="skill">Traffic Monitoring</span>
+            <span class="skill">Network Design</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Abhishek -->
+      <div class="team-card">
+        <div class="team-card-header">
+          <div class="avatar">AD</div>
+          <div>
+            <h3>Abhishek Turjo Dash</h3>
+            <div class="id">S5376540</div>
+          </div>
+        </div>
+        <div class="team-card-body">
+          <p>Dataset creation, data visualization, and statistical analysis of security events.</p>
+          <div class="skills">
+            <span class="skill">Data Analysis</span>
+            <span class="skill">Python</span>
+            <span class="skill">Data Visualization</span>
+            <span class="skill">Statistical Analysis</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Akash -->
+      <div class="team-card">
+        <div class="team-card-header">
+          <div class="avatar">AN</div>
+          <div>
+            <h3>Akash Muraleedharan Nair</h3>
+            <div class="id">S5386260</div>
+          </div>
+        </div>
+        <div class="team-card-body">
+          <p>Dashboard development, web interface design, and system automation.</p>
+          <div class="skills">
+            <span class="skill">React</span>
+            <span class="skill">TypeScript</span>
+            <span class="skill">Dashboard Development</span>
+            <span class="skill">System Automation</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <h4>IoT Security Lab</h4>
+        <div class="small">Griffith University</div>
+        <p class="small">Advanced cybersecurity research and education through practical IoT security testing and validation.</p>
+      </div>
+     
+      <div>
+        <h4>Contact</h4>
+        <div class="small">Supervisor: <a href="#">Dr. Zahra Jadidi</a></div>
+        <div class="small">Griffith University</div>
+        <div class="small">School of ICT</div>
+      </div>
+    </div>
+    <div class="legal">© 2025 IoT Security Lab, Griffith University. All rights reserved. | For educational and research use only.</div>
+  </footer>
+
+</body>
+</html>
