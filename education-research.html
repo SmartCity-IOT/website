@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Education & Research — IoT Security Lab</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{font-family:Inter,system-ui,sans-serif;color:#0f172a;background:#fff;line-height:1.6}
+
+    /* NAVBAR (standardized: .nav-wrap / .nav / .link) */
+    .nav-wrap{position:sticky;top:0;z-index:50;background:#fff;border-bottom:1px solid #e2e8f0}
+    .nav{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:72px;padding:0 20px}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:500;font-size:20px;color:#0f172a;text-decoration:none} /* normal weight */
+    .brand img{height:42px;width:auto}
+    nav{display:flex;gap:24px;align-items:center}
+    .link{
+      padding:8px 14px;border-radius:10px;
+      color:#334155;font-weight:400;text-decoration:none;
+      transition:background-color .2s ease,color .2s ease,border-color .2s ease;
+    }
+    .link:hover{background:#f1f5f9;color:#1d4ed8}
+    .link.active,.link[aria-current="page"]{background:#e9f0ff;color:#1d4ed8;border:1px solid #bfdbfe}
+
+    /* HERO */
+    .hero{
+      background: url("assets/img/ear.png") no-repeat center center/cover;
+      color:#fff;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center;
+      height:460px;padding:0 24px;position:relative;
+    }
+    .hero::before{content:"";position:absolute;inset:0;background:rgba(15,23,42,0.55)}
+    .hero > *{position:relative;z-index:1}
+    .hero h1{font-size:48px;font-weight:800;margin-bottom:14px}
+    .hero p{max-width:960px;font-size:18px;color:#e0e7ff}
+
+    /* SECTION */
+    .section{padding:70px 20px;text-align:center}
+    .section h2{font-size:34px;font-weight:700;margin-bottom:12px}
+    .section .lead{max-width:860px;margin:0 auto 28px;color:#475569;font-size:18px}
+
+    /* Cards */
+    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;max-width:1100px;margin:0 auto}
+    .card{background:#f8fafc;border:1px solid #e2e8f0;border-radius:14px;padding:28px;text-align:left}
+    .card h3{font-size:20px;font-weight:700;margin-bottom:10px}
+    .card p{color:#475569;margin-bottom:12px}
+    .tags{display:flex;flex-wrap:wrap;gap:8px}
+    .tag{background:#e0e7ff;color:#1e40af;padding:4px 10px;border-radius:6px;font-size:13px;font-weight:600}
+
+    /* Highlight box */
+    .highlight{background:#fffbea;border:1px solid #fde68a;border-radius:12px;padding:28px;max-width:1000px;margin:40px auto;text-align:left}
+    .highlight h3{font-size:22px;font-weight:700;margin-bottom:12px}
+    .highlight p{margin-bottom:12px}
+    .highlight ul{margin:0;padding-left:18px;color:#78350f}
+
+    /* Stats */
+    .stats{display:flex;justify-content:center;gap:40px;margin:50px auto;flex-wrap:wrap}
+    .stat{text-align:center}
+    .stat h3{font-size:32px;font-weight:800;margin-bottom:8px}
+    .stat p{color:#475569}
+
+    /* Footer */
+    footer{background:#0f172a;color:#cbd5e1;padding:50px 20px 20px}
+    .footer-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px}
+    footer h4{color:#fff;margin-bottom:10px}
+    .small{font-size:14px;color:#94a3b8;margin-bottom:6px}
+    .legal{border-top:1px solid #1e293b;margin-top:30px;padding-top:16px;text-align:center;font-size:13px;color:#94a3b8}
+    @media(max-width:900px){.footer-grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <div class="nav-wrap">
+    <div class="nav">
+      <a class="brand" href="index.html">
+        <img src="assets/img/iot-security-lab-logo.png" alt="IoT Security Lab logo">
+        IoT Security Lab
+      </a>
+      <nav>
+        <a class="link" href="index.html">Home</a>
+        <a class="link" href="team.html">Team</a>
+        <a class="link active" aria-current="page" href="education-research.html">Education &amp; Research</a>
+        <a class="link" href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <header class="hero">
+    <h1>Education & Research</h1>
+    <p>Advancing cybersecurity education through hands-on learning, ethical research, and comprehensive understanding of IoT security challenges and solutions.</p>
+  </header>
+
+  <!-- SECTION: Learning Objectives -->
+  <section class="section">
+    <h2>Learning Objectives</h2>
+    <p class="lead">A Smart City is a modern urban area that uses technology, sensors, and data to improve the way people live, work, and move around.
+       By connecting infrastructure like traffic systems, energy grids, and public services through the Internet of Things (IoT), smart cities aim to make everyday life safer, more efficient, and sustainable 
+       We are using these sensors as part of our Smart City cybersecurity project.
+       Each sensor plays a crucial role in collecting real-time environmental data and helping us create practical datasets.</p>
+      
+    <div class="cards">
+      <div class="card">
+        <h3>🌿 CO₂ Sensor
+        </h3>
+        <p>→Monitors air quality in traffic and public spaces.</p>
+        <p>→Detects high emissions and supports climate reporting.</p>
+        <p>→Aids sustainability initiatives</p>
+        
+      </div>
+      <div class="card">
+        <h3>🔊 Noise Sensor
+        </h3>
+        <p>→Measures urban sound levels in real time</p>
+        <p>→Identifies traffic & construction hotspots </p>
+        <p>→Supports public health and urban planning</p>
+        
+      </div>
+      <div class="card">
+        <h3>📡 Ultrasound Senso</h3>
+        <p>→Detects object presence and distance </p>
+        <p>→Enables smart waste-bin & parking management </p>
+        <p>→Reliable in low-light conditions </p>
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <div style="max-width:860px;margin:30px auto 0;text-align:center;color:#475569;font-size:18px;line-height:1.6"></div>
+    <p class="lead">By integrating these sensors, our project not only demonstrates how IoT devices enhance urban living but also allows us to explore cybersecurity risks, data protection, and attack simulations in a realistic environment. 
+      This hands-on approach strengthens both technical skills and security awareness for future smart city solutions.</p>
+    </div>
+  </section>
+
+  <!-- SECTION: Highlight Ethical Hacking -->
+  <section class="section">
+    <div class="highlight">
+      <h2>Smart City</h2>
+      <div style="display:flex;gap:40px;flex-wrap:wrap">
+        <div style="flex:1">
+          <h3 style="color:#b45309">⚙️ Key Features</h3>
+          <p>📡 Devices that monitor air quality, noise levels energy usage and traffic flow</p>
+          <p>🌐 Secure networks (like ZigBee, Wi-Fi, or 5G) link sensors and systems.</p>
+          <p>🏙️ Automated traffic lights, smart grids, and intelligent waste management.</p>
+          <p>📊 Real-time monitoring platforms to visualize city data</p>
+          <p>🔒 Cybersecurity measures to protect data and prevent misuse.</p>
+        </div>
+        <div style="flex:1">
+          <h3 style="color:#b45309">🎯 Benefits</h3>
+          <ul>
+            <li>Better Quality of Life</li>
+            <li>Efficiency</li>
+            <li>Safety</li>
+            <li>Sustainability</li>
+            <li>Data for Innovation:</li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION: Research Applications -->
+  <section class="section">
+    <h2>Research Applications</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Academic Research</h3>
+        <p>Foundation for advanced cybersecurity research projects and academic publications.</p>
+      </div>
+      <div class="card">
+        <h3>Industry Applications</h3>
+        <p>Real-world security testing scenarios applicable to IoT deployment in various sectors.</p>
+      </div>
+      <div class="card">
+        <h3>Educational Resources</h3>
+        <p>Comprehensive datasets and methodologies for cybersecurity education programs.</p>
+      </div>
+      <div class="card">
+        <h3>Future Research</h3>
+        <p>Platform for expanding research into emerging IoT security challenges and solutions.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION: Impact -->
+  <section class="section">
+    <h2>Educational Impact</h2>
+    <div class="stats">
+      <div class="stat">
+        <h3>6</h3>
+        <p>Students Trained</p>
+      </div>
+      <div class="stat">
+        <h3>4</h3>
+        <p>Attack Vectors</p>
+      </div>
+      <div class="stat">
+        <h3>∞</h3>
+        <p>Future Impact</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <h4>IoT Security Lab</h4>
+        <div class="small">Griffith University</div>
+        <p class="small">Advanced cybersecurity research and education through practical IoT security testing and validation.</p>
+      </div>
+      
+      <div>
+        <h4>Contact</h4>
+        <div class="small">Supervisor: <a href="#">Dr. Zahra Jadidi</a></div>
+        <div class="small">Griffith University</div>
+        <div class="small">School of ICT</div>
+      </div>
+    </div>
+    <div class="legal">© 2025 IoT Security Lab, Griffith University. All rights reserved. | For educational and research use only.</div>
+  </footer>
+
+</body>
+</html>
+
+

@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Contact — IoT Security Lab</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{font-family:Inter,system-ui,sans-serif;color:#0f172a;background:#fff;line-height:1.6}
+
+    /* NAVBAR (class names aligned with your HTML) */
+    .nav-wrap{position:sticky;top:0;z-index:50;background:#fff;border-bottom:1px solid #e2e8f0}
+    .nav{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:72px;padding:0 20px}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:500;font-size:20px;color:#0f172a;text-decoration:none} /* normal weight */
+    .brand img{height:42px;width:auto}
+    nav{display:flex;gap:24px;align-items:center}
+    .nav-link{
+      padding:8px 14px;
+      border-radius:10px;
+      color:#334155;
+      font-weight:400;             /* not bold */
+      text-decoration:none;
+      transition:background-color .2s ease, color .2s ease, border-color .2s ease;
+    }
+    .nav-link:hover{background:#f1f5f9;color:#1d4ed8}
+    .nav-link.active,[aria-current="page"].nav-link{
+      background:#e9f0ff;
+      color:#1d4ed8;
+      border:1px solid #bfdbfe;
+    }
+
+    /* HERO */
+    .hero{
+      background: url("assets/img/contact.png") no-repeat center/cover;
+      width:100%;height:480px;position:relative;color:#fff;
+      display:flex;flex-direction:column;align-items:center;justify-content:center;
+      text-align:center;padding:0 24px;
+    }
+    .hero::before{content:"";position:absolute;inset:0;background:rgba(15,23,42,.55)}
+    .hero > *{position:relative;z-index:1}
+    .hero h1{font-size:48px;font-weight:700;margin-bottom:12px}
+    .hero p{max-width:960px;margin:0 auto;font-size:18px;color:#e0e7ff}
+
+    /* Contact section */
+    .contact-section{padding:70px 20px;max-width:1200px;margin:0 auto}
+    .contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;margin-bottom:50px}
+    .card{background:#fff;border:1px solid #e2e8f0;border-radius:14px;padding:28px;box-shadow:0 4px 12px rgba(0,0,0,.05)}
+    .card h3{font-size:20px;font-weight:700;margin-bottom:6px}
+    .card p{font-size:15px;color:#475569;margin-bottom:10px}
+    .highlight{background:#f1f5f9;border-left:4px solid #3b82f6;padding:10px;font-size:14px;color:#334155}
+
+    /* Footer */
+    footer{background:#0f172a;color:#cbd5e1;padding:50px 20px 20px}
+    .footer-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px}
+    footer h4{color:#fff;margin-bottom:10px}
+    .small{font-size:14px;color:#94a3b8;margin-bottom:6px}
+    .legal{border-top:1px solid #1e293b;margin-top:30px;padding-top:16px;text-align:center;font-size:13px;color:#94a3b8}
+    @media(max-width:900px){.footer-grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <div class="nav-wrap">
+    <div class="nav">
+      <a class="brand" href="index.html">
+        <img src="assets/img/iot-security-lab-logo.png" alt="IoT Security Lab logo">
+        IoT Security Lab
+      </a>
+      <nav>
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="team.html">Team</a>
+        <!-- This matches your current file; we can convert to a hyphen name later if you want -->
+        <a class="nav-link" href="education-research.html">Education & Research</a>
+        <a class="nav-link active" aria-current="page" href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </div>
+
+ 
+  <!-- HERO -->
+  <header class="hero">
+    <h1>Contact</h1>
+    <p>Reach out to our IoT Security Lab team for technical details, dataset access, collaborations, or student support. We connect academia, industry, and students to make IoT systems safer and future-ready.</p>
+  </header>
+
+  <!-- CONTACT SECTION -->
+  <section class="contact-section">
+    <div class="contact-grid">
+      <div class="card">
+        
+        
+        
+      <div class="card">
+        <h3>Dr. Zahra Jadidi</h3>
+        <p><strong>Project Supervisor</strong></p>
+        <p>📧 z.jadidi@griffith.edu.au</p>
+        
+        <div class="highlight">For academic guidance, research direction, and official university matters.</div>
+      </div>
+      <div class="card">
+        <h3>Griffith University</h3>
+        <p><strong>School of ICT</strong></p>
+        <p>📍 Gold Coast Campus,  QLD 4215, Australia</p>
+        <p>📞 +61 75552 8811</p>
+        
+        <div class="highlight">For general enquiries, admissions, and program information.</div>
+      </div>
+    </div>
+
+    <h2 style="text-align:center;margin-bottom:20px;">Lab Access Information</h2>
+    <div class="contact-grid">
+      <div class="card">
+        <h3>Local Intranet Access</h3>
+        <p>This website is hosted on the secure lab intranet for educational access within the controlled environment.</p>
+        <div class="highlight"><strong>Instructions:</strong> Connect to the lab network and access via internal IP address.</div>
+      </div>
+      <div class="card">
+        <h3>Network Requirements</h3>
+        <p>Access is restricted to authorized personnel and students enrolled in the cybersecurity program.</p>
+        <div class="highlight"><strong>Instructions:</strong> Contact your instructor for network access credentials.</div>
+      </div>
+      <div class="card">
+        <h3>Lab Schedule</h3>
+        <p>The IoT Security Lab is available during scheduled class times and by appointment.</p>
+        <div class="highlight"><strong>Instructions:</strong> Schedule lab sessions through the course coordinator.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <h4>IoT Security Lab</h4>
+        <div class="small">Griffith University</div>
+        <p class="small">Advanced cybersecurity research and education through practical IoT security testing and validation.</p>
+      </div>
+      
+      <div>
+        <h4>Contact</h4>
+        <div class="small">Supervisor: <a href="#">Dr. Zahra Jadidi</a></div>
+        <div class="small">Griffith University</div>
+        <div class="small">School of ICT</div>
+      </div>
+    </div>
+    <div class="legal">© 2025 IoT Security Lab, Griffith University. All rights reserved. | For educational and research use only.</div>
+  </footer>
+
+</body>
+</html>
